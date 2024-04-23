@@ -1,15 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://m2ls4tdh1k3v"]
+[gd_scene load_steps=5 format=3 uid="uid://m2ls4tdh1k3v"]
 
 [ext_resource type="Texture2D" uid="uid://cqh6o274n44s5" path="res://hex_grid.png" id="1_80f1n"]
+[ext_resource type="Script" path="res://tile_map_controller.gd" id="2_6or3m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rx8tm"]
 texture = ExtResource("1_80f1n")
 margins = Vector2i(9, 8)
 separation = Vector2i(18, 0)
 texture_region_size = Vector2i(110, 96)
+0:0/next_alternative_id = 2
 0:0/0 = 0
+0:0/1 = 1
+0:0/1/modulate = Color(0, 1, 1, 1)
+1:0/next_alternative_id = 2
 1:0/0 = 0
+1:0/1 = 1
+1:0/1/modulate = Color(0.67451, 0, 1, 1)
+2:0/next_alternative_id = 2
 2:0/0 = 0
+2:0/1 = 1
+2:0/1/modulate = Color(0.580392, 1, 1, 1)
 
 [sub_resource type="TileSet" id="TileSet_vnqob"]
 tile_shape = 3
@@ -18,7 +28,8 @@ tile_size = Vector2i(102, 94)
 sources/0 = SubResource("TileSetAtlasSource_rx8tm")
 
 [node name="TileMap" type="TileMap"]
-position = Vector2(-197, -51)
+position = Vector2(187, 216)
 tile_set = SubResource("TileSet_vnqob")
 format = 2
-layer_0/tile_data = PackedInt32Array(0, 0, 0, -65535, 0, 0, 1, 0, 0, 2, 0, 0, 65538, 0, 0, 3, 0, 0, 4, 131072, 0, -65533, 131072, 0, -65534, 131072, 0, -131069, 131072, 0, -131070, 131072, 0, -131071, 131072, 0, -65536, 131072, 0, -65532, 131072, 0, 65540, 131072, 0, 65539, 131072, 0, 131074, 131072, 0, 131073, 131072, 0, 65537, 0, 0, 65536, 0, 0, 131072, 65536, 0, 196608, 65536, 0, 196609, 65536, 0, 196610, 65536, 0, 131076, 65536, 0, 131075, 65536, 0, 65541, 65536, 0, 5, 65536, 0, 65542, 65536, 0, 6, 65536, 0)
+layer_0/tile_data = PackedInt32Array(-65535, 0, 0, 1, 0, 0, 2, 0, 0, 65538, 0, 0, 3, 0, 0, 4, 131072, 0, -65533, 131072, 0, -65534, 131072, 0, -131069, 131072, 0, -131070, 131072, 0, -131071, 131072, 0, -65536, 131072, 0, -65532, 131072, 0, 65540, 131072, 0, 65539, 131072, 0, 131074, 131072, 0, 131073, 131072, 0, 65537, 0, 0, 65536, 0, 0, 131072, 65536, 0, 196608, 65536, 0, 196609, 65536, 0, 196610, 65536, 0, 131076, 65536, 0, 131075, 65536, 0, 65541, 65536, 0, 5, 65536, 0, 65542, 65536, 0, 6, 65536, 0, 0, 65536, 0, 65535, 65536, 0, 131071, 65536, 0)
+script = ExtResource("2_6or3m")
